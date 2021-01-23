@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobileDemo.Views.MainPageItem">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image HeightRequest="200" Source="{Binding ClothesSource}"></Image>
+            <Label x:Name="label" Text="{Binding ClothesTitle}"></Label>
+            <!--<Entry x:Name="imgName"  Placeholder="{Binding ClothesTitle}" Text="{Binding ClothesTitle}"></Entry>-->
+            <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged"></Picker>
+            <Button Text="Сохранить" Clicked="Button_Clicked"></Button>
+            <!--<Button Text="delete" Clicked="Button_Clicked_1"></Button>-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             
+             x:Class="mobileDemo.Views.HarderobePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="bla" Margin="5,0,5,0" HasUnevenRows="True" ItemsSource="{Binding Looks}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Image HeightRequest="200" Source="{Binding LooksSource}"></Image>
+                                <Label Text="{Binding LooksTitle}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                        
+            
+            <FlexLayout Direction="Row" JustifyContent="SpaceAround">
+                <!--<Button WidthRequest="80" HorizontalOptions="Center" Text="Гардероб"  Command="{Binding LoginButton}"></Button>-->
+                <Image Source="Harderobe.png" HorizontalOptions="Center"></Image>
+                <!--<Button WidthRequest="80" HorizontalOptions="Center" Text="make new"  Command="{Binding LoginButton}"></Button>
+        <Button WidthRequest="80" HorizontalOptions="Center" Text="Камера"  Command="{Binding LoginButton}"></Button>
+        <Button WidthRequest="80" HorizontalOptions="Center" Text="Настройки"  Command="{Binding LoginButton}"></Button>-->
+                <ImageButton Source="Create.png" HorizontalOptions="Center" Command="{Binding ClothesButton}"></ImageButton>
+                <ImageButton Source="add.png" HorizontalOptions="Center" Command="{Binding AddButton}"></ImageButton>
+                <ImageButton Source="Settings.png" HorizontalOptions="Center" Command="{Binding ProfileButton}"></ImageButton>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

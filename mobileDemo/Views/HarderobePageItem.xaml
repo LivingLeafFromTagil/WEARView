@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:mobileDemo.Views"
+             x:Class="mobileDemo.Views.HarderobePageItem">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView InputTransparent="True">
+                <StackLayout x:Name="layout">
+                    <!--<StackLayout HorizontalOptions="Start">
+                        <local:PanContainer>
+                            <Image x:Name="monkey" Source="shirts.png" WidthRequest="100" HeightRequest="100"/>
+                        </local:PanContainer>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start">
+                        <local:PanContainer>
+                            <Image x:Name="monkey2" Source="shirts.png" WidthRequest="100" HeightRequest="100"/>
+                        </local:PanContainer>
+                    </StackLayout>
+
+                    <StackLayout HorizontalOptions="Start">
+                        <local:PanContainer>
+                            <Image x:Name="monkey3" Source="shirts.png" WidthRequest="100" HeightRequest="100"/>
+                        </local:PanContainer>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="Start">
+                        <local:PanContainer>
+                            <Image x:Name="monkey4" Source="shirts.png" WidthRequest="100" HeightRequest="100"/>
+                        </local:PanContainer>
+                    </StackLayout>-->
+                </StackLayout>
+            </ScrollView>
+            <FlexLayout JustifyContent="SpaceBetween" VerticalOptions="End">
+                <Button WidthRequest="220" Text="Добавить" Command="{Binding AddButton}"></Button>
+                <Button WidthRequest="220" Text="Сохранить" Command="{Binding SaveButton}"></Button>
+            </FlexLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

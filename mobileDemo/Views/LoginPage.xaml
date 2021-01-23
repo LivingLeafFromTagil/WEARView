@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Авторизация"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobileDemo.LoginPage">
+
+    <StackLayout>
+        <Entry x:Name="Login" Placeholder="Логин" Text="{Binding LoginText}"></Entry>
+        <Entry x:Name="Password" Placeholder="Пароль" IsPassword="True" Text="{Binding PasswordText}"></Entry>
+        <ActivityIndicator IsRunning="{Binding IsLoading}"></ActivityIndicator>
+        <Button Text="Войти" Margin="100, 100, 100, 0" Command="{Binding LoginButton}"></Button>
+    </StackLayout>
+
+</ContentPage>

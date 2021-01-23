@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mobileDemo.Views.MainPage"
+             Title="Одежда">
+    <StackLayout>
+        <StackLayout >
+            
+                <ListView Margin="5, 0, 5, 0" HasUnevenRows="True" ItemsSource="{Binding Clothes}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Image HeightRequest="50" HorizontalOptions="Start" Source="{Binding ClothesSource}"></Image>
+                                <Label Text="{Binding ClothesTitle}"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+
+
+                
+        <FlexLayout Margin="0, 20, 0, 0" Direction="Row" JustifyContent="SpaceAround">
+            <Label WidthRequest="48"></Label>
+            <Label WidthRequest="48"></Label>
+            <Label WidthRequest="48"></Label>
+            <ImageButton x:Name="addButton" Source="add.png" HorizontalOptions="Center" Command="{Binding AddButton}"></ImageButton>
+
+        </FlexLayout>
+        <FlexLayout Direction="Row" JustifyContent="SpaceAround">
+            <!--<Button WidthRequest="80" HorizontalOptions="Center" Text="Гардероб"  Command="{Binding LoginButton}"></Button>-->
+            <ImageButton Source="Harderobe.png" HorizontalOptions="Center" Command="{Binding HarderobeButton}"></ImageButton>
+            <!--<Button WidthRequest="80" HorizontalOptions="Center" Text="make new"  Command="{Binding LoginButton}"></Button>
+        <Button WidthRequest="80" HorizontalOptions="Center" Text="Камера"  Command="{Binding LoginButton}"></Button>
+        <Button WidthRequest="80" HorizontalOptions="Center" Text="Настройки"  Command="{Binding LoginButton}"></Button>-->
+            <Image Source="Create.png" HorizontalOptions="Center" ></Image>
+            <ImageButton x:Name="cameraButton"  Source="camera2.png" HorizontalOptions="Center" Command="{Binding CameraButton}"></ImageButton>
+            <ImageButton Source="Settings.png" HorizontalOptions="Center" Command="{Binding ProfileButton}"></ImageButton>
+        </FlexLayout>
+    </StackLayout>
+</ContentPage>
